@@ -1,0 +1,3 @@
+[submodule "src/tools"]
+	path = src/tools
+	url = https://github.com/TUPLES-Trustworthy-AI/Beluga-AI-Challenge-Toolkit.git
