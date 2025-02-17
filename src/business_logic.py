@@ -160,14 +160,15 @@ class CompetitorModelBusinessLogic:
         """
 
         # Setup the simulation
-        logger.debug(f"[START SIMULATION] - Start simulation - Submission ID: {submission_id}, Problem ID: {problem_id}, Simulation ID: {simulation_id}")
+        logger.debug(f"[START SIMULATION] - Simulation setup started - Submission ID: {submission_id}, Problem ID: {problem_id}, Simulation ID: {simulation_id}")
         self.prob_planner.setup_episode()
-        logger.debug(f"[START SIMULATION] - Simulation complete - Submission ID: {submission_id}, Problem ID: {problem_id}, Simulation ID: {simulation_id}")
+        logger.debug(f"[START SIMULATION] - Simulation setup complete - Submission ID: {submission_id}, Problem ID: {problem_id}, Simulation ID: {simulation_id}")
 
     def next_action(self, submission_id, problem_id, simulation_id, action_id, input_path, output_path):
         """
         Handle the next action in a series for a specific simulation.
         """
+
         try:
             # Read the state and metadata
             input_file = os.path.join(input_path, configuration.state_and_metadata_name)
